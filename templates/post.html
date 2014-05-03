@@ -4,7 +4,7 @@
 <nav>
 	<span class="prev">
 		{% if prevPost %}
-			<a href='{{ ROOT_URL }}/{{ prevPost.path }}'>
+			<a href='{{ ROOT_URL }}/{{ prevPost.path }}' class="{{ prevPost.lang }}">
 				&laquo; {{ prevPost.title }}
 			</a>
 		{% else %}
@@ -18,7 +18,7 @@
 
 	<span class="next">
 		{% if nextPost %}
-			<a href='{{ ROOT_URL }}/{{ nextPost.path }}'>
+			<a href='{{ ROOT_URL }}/{{ nextPost.path }}' class="{{ nextPost.lang }}">
 				{{ nextPost.title }} &raquo;
 			</a>
 		{% else %}
@@ -28,7 +28,9 @@
 </nav>
 <article>
 	<header>
-		<h1 class="{{ lang }}">{{ title }}</h1>
+		<div class="{{ lang }}">
+			<h1>{{ title }}</h1>
+		</div>
 		<h5><time pubdate="pubdate">{{ date|date:"F j, Y" }}</time> by <span class="author">{{ author }}</address></h5>
 	</header>
 		<div class="{{ lang }}">
