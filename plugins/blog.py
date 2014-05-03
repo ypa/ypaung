@@ -51,6 +51,7 @@ def preBuild(site):
 			postContext['author'] = find('author')
 			postContext['date'] = find('date')
 			postContext['path'] = page.path
+			postContext['lang'] = find('lang')
 			postContext['body'] = getNode(get_template(page.path), name="body")
 			
 			# Parse the date into a date object
