@@ -1,0 +1,64 @@
+title: Metrocard Refill Calculator
+author: Yan P Aung
+date: 08-09-2014
+
+{% extends "post.html" %}
+{% block body %}
+
+
+{% load markup %}
+{% filter markdown %}
+
+
+Background - Last week I ran accross this post <a href="http://iquantny.tumblr.com/post/96700509489/how-memorizing-19-05-can-help-you-outsmart-the-mta">How Memorizing “$19.05” Can Help You Outsmart the MTA</a> and shared it on Facebook. A good friend of mine from my college days, <a href="https://www.facebook.com/steven.su.716">Steven Su</a>, saw it and worked out the math for those who already own the card and have some remaining balance. He wrote on his facebook status:
+> I started thinking, what if you've already bought a card with a leftover balance and you want to know how much to refill your card so that it'll come out even? ... 
+{% endfilter %}
+
+<form name="rcal">
+	<table>
+		<tr>
+			<td>Remaining balance on card:</td>
+			<td>$ <input type="text" name="amountleft" value="2.50" onchange="calculate();"></td>
+		</tr>
+		<tr>
+			<td>Desired number of rides:</td>
+			<td>
+				<select name="numrides" onchange="calculate();">
+				  <option value="1">1</option>
+				  <option value="2">2</option>
+				  <option value="3">3</option>
+				  <option value="4">4</option>
+				  <option value="5">5</option>
+				  <option value="6">6</option>
+				  <option value="7">7</option>
+				  <option value="8">8</option>
+				  <option value="9">9</option>
+				  <option value="10">10</option>
+				  <option value="11">11</option>
+				  <option value="12">12</option>
+				  <option value="13">13</option>
+				  <option value="14">14</option>
+				  <option value="15">15</option>
+				  <option value="16">16</option>
+				  <option value="17">17</option>
+				  <option value="18">18</option>
+				  <option value="19">19</option>
+				  <option value="20">20</option>
+				</select> 
+			</td>		
+		</tr>
+		<tr>
+			<td></td>
+			<td><input type="button" value="Calculate" onclick="calculate();"></td>
+		</tr>
+		<tr>
+			<td><b>Refill Amount:</b></td>
+			<td><b>$<span class="result" id="refill">0.00</span></b></td>
+		</tr>
+	</table>
+</form>
+Credits to <a href="https://www.facebook.com/steven.su.716">Steven Su</a> for working out the math.
+<br>
+
+
+{% endblock %}
