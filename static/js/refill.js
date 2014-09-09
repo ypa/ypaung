@@ -12,7 +12,9 @@ function calculate() {
 		x = 0.00 ;
 	}
 
+	var xToNickle = Math.ceil(x*20) / 20;
+
 	var refill = document.getElementById("refill");
 
-	refill.innerHTML = x.toFixed(2);
+	refill.innerHTML = xToNickle.toFixed(2);
 }
