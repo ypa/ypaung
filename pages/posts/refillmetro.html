@@ -17,14 +17,14 @@ Last week I ran accross this post <a href="http://iquantny.tumblr.com/post/96700
 	<table>
 		<tr>
 			<td>Remaining balance on card:</td>
-			<td>$ <input type="text" name="amountleft" value="2.50" onchange="calculate();"></td>
+			<td>$ <input type="text" name="amountleft" value="2.45" onchange="calculate();"></td>
 		</tr>
 		<tr>
 			<td>Desired number of rides:</td>
 			<td>
 				<select name="numrides" onchange="calculate();">
 				  <option value="1">1</option>
-				  <option value="2">2</option>
+				  <option value="2" selected="selected">2</option>
 				  <option value="3">3</option>
 				  <option value="4">4</option>
 				  <option value="5">5</option>
@@ -72,7 +72,11 @@ Last week I ran accross this post <a href="http://iquantny.tumblr.com/post/96700
 		</tr>
 		<tr>
 			<td><b>Refill Amount:</b></td>
-			<td><b>$<span class="result" id="refill">0.00</span></b><br><span> (add $1 for a new card)</span></td>
+			<td><b>$<span class="result" id="refill">2.55</span></b><br><span> (add $1 for a new card)</span></td>
+		</tr>
+		<tr>
+			<td>Total balance after refill:</td>
+			<td>$<span class="result" id="total">5.00</span></td>
 		</tr>
 	</table>
 </form>
