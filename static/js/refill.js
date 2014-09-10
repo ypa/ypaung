@@ -3,9 +3,11 @@ function calculate() {
 	var nRides = document.rcal.numrides.value;
 
 	var x = (50 * nRides - 20 * amtCard) / 21;
+	var discount = true;
 
 	if ( x < 5 ) {
 		x = nRides * 2.50 - amtCard;
+		discount = false;
 	}
 
 	if ( x < 0 ) {
@@ -23,7 +25,7 @@ function calculate() {
 	var totalBalance = document.getElementById("total");
 	var totalBal = 0.00;
 
-	if ( x > 5 ) {
+	if ( discount ) {
 		totalBal = (amtCard*1.0 + x + x/20);
 	} else {
 		totalBal = (amtCard*1.0 + x );
