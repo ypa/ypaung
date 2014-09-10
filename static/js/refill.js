@@ -12,9 +12,26 @@ function calculate() {
 		x = 0.00 ;
 	}
 
-	var xToNickle = Math.ceil(x*20) / 20;
+	if ((x.toFixed(2) * 20) % 1) {
+		x = roundUpToNickel(x);
+	}
 
 	var refill = document.getElementById("refill");
 
-	refill.innerHTML = xToNickle.toFixed(2);
+	refill.innerHTML = x.toFixed(2);
+
+	var totalBalance = document.getElementById("total");
+	var totalBal = 0.00;
+
+	if ( x > 5 ) {
+		totalBal = (amtCard*1.0 + x + x/20);
+	} else {
+		totalBal = (amtCard*1.0 + x );
+	}
+
+	totalBalance.innerHTML = totalBal.toFixed(2);
+}
+
+function roundUpToNickel(x) {
+	return Math.ceil(x*20) / 20;
 }
