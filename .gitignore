@@ -4,3 +4,4 @@ env
 config.json
 .idea
 .DS_Store
+.venv36
