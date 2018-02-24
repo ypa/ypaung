@@ -1,0 +1,4 @@
+boto==2.48.0
+Cactus==2.3.1
+Django==1.5.5
+Markdown==2.6.11
