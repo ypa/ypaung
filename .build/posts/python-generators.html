@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+	<title>Welcome</title>
+	
+	<link rel="shortcut icon" href="../static/favicon.ico">
+	<link href='http://mywebfont.appspot.com/css?font=myanmar3' rel='stylesheet' type='text/css'>
+	<link href='http://mywebfont.appspot.com/css?font=zawgyi' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="../static/css/master.css" type="text/css" media="screen" charset="utf-8">
+	<link rel="stylesheet" href="../static/css/prism.css" type="text/css" media="screen" charset="utf-8">
+</head>
+<body>
+	
+<nav>
+	<span class="prev">
+		
+			First post
+		
+	</span>
+	
+	<span>
+		<a href="/">Home</a>
+	</span>
+
+	<span class="next">
+		
+			<a href='../posts/MawHa.html' class="myanmar">
+				မောဟ &raquo;
+			</a>
+		
+	</span>
+</nav>
+<article>
+	<header>
+		<div class="">
+			<h1>Python Generators Example</h1>
+		</div>
+		<h5><time pubdate="pubdate">October 1, 2013</time> by <span class="author">Yan P Aung</address></h5>
+	</header>
+		<div class="">
+		
+
+
+<p>Generators were a mystery to me when I first learned Python. I learned them through an excellent explanation on <a href="http://www.stackoverflow.com">Stackoverflow</a> about Python <a href="http://stackoverflow.com/questions/231767/the-python-yield-keyword-explained#231855">yield keyword</a> and generators in general. Generators are more memory efficient because they return a sequence lazilily, meaning each item in the sequence gets computed at the last minute.</p>
+<p>The other day, I was reading the book <a href="http://www.amazon.com/Python-Data-Analysis-Wes-McKinney/dp/1449319793/">Python for Data Analysis</a> and found an interesting usage of Python generators in the appendix.</p>
+<p>It was the classic coin change problem and Python generators were used to solve it. </p>
+<pre>
+	<code class="language-python">
+def make_change(amount, coins=[1, 5, 10, 25], hand=None):
+    hand = [] if hand is None else hand
+    if amount == 0:
+        yield hand
+    for coin in coins:
+        # ensures we don't give too much change, and combinations are unique
+        if coin > amount or (len(hand) > 0 and hand[-1] < coin):
+            continue
+
+        for result in make_change(amount - coin, coins=coins, 
+                                  hand=hand + [coin]):
+            yield result
+	</code>
+</pre>
+
+
+
+		</div>
+	<footer>
+		© Yan P Aung
+	</footer>
+</article>
+
+	<script src="../static/js/prism.js"></script>
+	<script src="../static/js/refill.js"></script>
+</body>
+</html>

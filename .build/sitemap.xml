@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<urlset xmlns="http://www.google.com/schemas/sitemap/0.84">
+
+	
+	<url>
+		<loc>posts/character.html</loc>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+	
+
+	
+	<url>
+		<loc>posts/meditation.html</loc>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+	
+
+	
+	<url>
+		<loc>posts/refillmetro.html</loc>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+	
+
+	
+	<url>
+		<loc>posts/python-generators.html</loc>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+	
+
+	
+	<url>
+		<loc>posts/hellyeah.html</loc>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+	
+
+	
+	<url>
+		<loc>posts/MawHa.html</loc>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+	
+
+	
+
+	
+	<url>
+		<loc>index.html</loc>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+	
+
+</urlset>
